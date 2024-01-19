@@ -1,0 +1,15 @@
+{
+    "name": "njole/simple-mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antonio Cahun",
+            "email": "cahunantonio1@gmail.com"
+        }
+    ],
+    "require": {}
+}
