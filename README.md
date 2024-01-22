@@ -5,7 +5,7 @@
 0.1.0
 ```
 
-> [!Success]- Working:
+## Working:
 >- [x] Router.
 >- [x] Handle POST data.
 >- [x] Handle GET data. 
@@ -16,6 +16,6 @@
 >- [ ] Middleware.
 >- [ ] Database connection.
 
-> [!Bug]- Known Issues:
+## Known Issues:
 > Many, project in development.
 
