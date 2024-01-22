@@ -3,14 +3,13 @@
 namespace app\controllers;
 
 use app\core\Controller;
+use app\core\Request;
 
 class SiteController extends Controller
 {
     public function home()
     {
-        $params = [
-            'name' => 'haiii'
-        ];
+        $params = [];
         return $this->render('home', $params);
     }
 
@@ -24,10 +23,10 @@ class SiteController extends Controller
         return $this->render('form');
     }
 
-    public function formHandler()
+    public function formHandler(Request $request)
     {
-        return 'Handling submitted data.';
+        $body = $request->getBody();
+        print_r($body);
     }
-
 
 }

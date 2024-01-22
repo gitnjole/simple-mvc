@@ -1,7 +1,7 @@
 <?php
 
 /**Testing purpose file */
-include '../../PHP_SHOW_ERR.php';
+//include '../../PHP_SHOW_ERR.php';
 
 require_once __DIR__.'/../vendor/autoload.php';
 
