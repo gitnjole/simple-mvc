@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/bg_fond.gif");
+    text-align: center;
+}
+
+ul > li {
+    display: inline-block;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.outer-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    background-color: rgb(149, 137, 137);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+  
