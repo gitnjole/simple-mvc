@@ -1,6 +1,7 @@
 <?php
 
 /**Testing purpose file */
+include '../../DUMP.php';
 include '../../PHP_SHOW_ERR.php';
 
 require_once __DIR__.'/../vendor/autoload.php';
