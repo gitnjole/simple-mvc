@@ -1,19 +1,7 @@
-<form action="" method="POST">
-    <label for="username">Please enter a username:</label>
-    <input type="text" name="username">
-    <br>
-
-    <label for="password">Please enter a password:</label>
-    <input type="password" name="password">
-    <br>
-
-    <label for="password">Please confirm the password:</label>
-    <input type="password" name="confirmPassword">
-    <br>
-
-    <label for="email">Please enter an email:</label>
-    <input type="text" name="email">
-    <br>
-
-    <input type="submit" value="Register">
-</form>
+<?php $form = \app\core\form\Form::Begin('', 'POST') ?>
+    <?= $form->Field($model, 'username')->textField() ?>
+    <?= $form->Field($model, 'password')->passwordField() ?>
+    <?= $form->Field($model, 'confirmPassword')->passwordField() ?>
+    <?= $form->Field($model, 'email')->emailField() ?>
+    <button type="submit">Register</button>
+<?php \app\core\form\Form::End() ?>
