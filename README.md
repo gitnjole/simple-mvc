@@ -21,12 +21,13 @@ SimpleMVC is a lightweight custom PHP framework designed to provide a solid foun
 >- [x] Handle POST data.
 >- [x] Handle GET data.
 >- [ ] Handle user registration.
+>    `partial implementation`
 >- [x] Layouts.
 >- [ ] Validation.
 >    `partial implementation`
 >- [x] Models.
 >- [ ] Middleware.
->- [ ] Database connection.
+>- [X] Database connection.
 
 ## Known issues:
 
@@ -65,9 +66,12 @@ Create the views in `views/`.
 
 Currently, views are embeded through `{{content}}` in `views/layouts/main.html`.
 
+## Migrations
+
+Will write up soon.
+
 # Examples
 
 Here I will link examples of 1-2 web applications created using my framework once I complete basic functionality needed to accomplish my goals.
-
 
 
