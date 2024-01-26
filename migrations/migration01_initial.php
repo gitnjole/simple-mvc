@@ -1,14 +1,27 @@
 <?php
 
+use app\core\Application;
+
 class Migration01_initial
 {
     public function Lift()
     {
-        echo "Appying migration";
+        $db = Application::$app->db;
+        $SQL = "CREATE TABLE IF NOT EXISTS users (
+                id SERIAL PRIMARY KEY,
+                email VARCHAR NOT NULL,
+                username VARCHAR NOT NULL,
+                password VARCHAR NOT NULL,
+                status SMALLINT NOT NULL,
+                join_date TIMESTAMP DEFAULT current_timestamp);
+                ";
+        $db->pdo->exec($SQL);
     }
 
-    public function Dip()
+    public function Drop()
     {
-        echo "Down migration";
+        $db = Application::$app->db;
+        $SQL = "DROP TABLE users;";
+        $db->pdo->exec($SQL);
     }
 }

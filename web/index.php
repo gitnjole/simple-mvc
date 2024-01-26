@@ -4,13 +4,23 @@
 include '../../DUMP.php';
 include '../../PHP_SHOW_ERR.php';
 
-require_once __DIR__.'/../vendor/autoload.php';
-
 use app\controllers\SiteController;
 use app\controllers\AuthController;
 use app\core\Application;
 
-$app = new Application(dirname(__DIR__));
+require_once __DIR__.'/../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
+
+$config = [
+    'db' => [
+        'DSN' => $_ENV['DB_DSN'],
+        'USERNAME' => $_ENV['DB_USER'],
+        'PASSWORD' => $_ENV['DB_PASSWORD']
+    ]
+    ];
+
+$app = new Application(dirname(__DIR__), $config);
 
 //Routes
 $app->router->get('/', [SiteController::class, 'home']);
