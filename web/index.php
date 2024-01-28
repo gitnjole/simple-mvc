@@ -1,8 +1,8 @@
 <?php
 
 /**Testing purpose file */
-include '../../DUMP.php';
-include '../../PHP_SHOW_ERR.php';
+/* include '../../DUMP.php';
+include '../../PHP_SHOW_ERR.php'; */
 
 use app\controllers\SiteController;
 use app\controllers\AuthController;
