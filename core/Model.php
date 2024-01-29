@@ -8,7 +8,7 @@ abstract class Model
     public const RULE_MATCH = 'match';
     public const RULE_EMAIL = 'email';
     public const RULE_PASS_LEN = 'min';
-    public const RULE_UNIQUE = '';
+    public const RULE_UNIQUE = 'unique';
 
     public function loadData($data)
     {
@@ -46,6 +46,21 @@ abstract class Model
                 }
                 if ($ruleName === self::RULE_MATCH && $value !== $this->{$rule['match']}) {
                     $this->addError($attribute, self::RULE_MATCH);
+                }
+                if ($ruleName === self::RULE_UNIQUE) {
+                    $className = $rule['class'];
+                    $uniqueAttribute = $rule['attribute'] ?? $attribute;
+                    $tableName = $className::tableName();
+
+                    $statement = Application::$app->db->prepare("SELECT * FROM $tableName WHERE 
+                                                                $uniqueAttribute = :attribute");
+                    $statement->bindValue(":attribute", $value);
+                    $statement->execute();
+                    $userRecord = $statement->fetchObject();
+
+                    if ($userRecord) {
+                        $this->addError($attribute, self::RULE_UNIQUE, ['field' => $attribute]);
+                    }
                 }
             }
         }
