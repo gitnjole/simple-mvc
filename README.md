@@ -4,7 +4,7 @@ SimpleMVC is a lightweight custom PHP framework designed to provide a solid foun
 
 ## Current version
 ```
-0.2.5
+0.3.0
 ```
 ## Features
 
@@ -20,8 +20,7 @@ SimpleMVC is a lightweight custom PHP framework designed to provide a solid foun
 >- [x] Router.
 >- [x] Handle POST data.
 >- [x] Handle GET data.
->- [ ] Handle user registration.
->    `partial implementation`
+>- [X] Handle user registration.
 >- [x] Layouts.
 >- [ ] Validation.
 >    `partial implementation`
