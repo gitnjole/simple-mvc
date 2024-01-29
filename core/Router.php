@@ -4,11 +4,11 @@ namespace app\core;
 
 class Router
 {
-    public ResponseCode $response;
+    public Response $response;
     public Request $request;
     protected array $routes = [];
 
-    public function __construct(Request $request, ResponseCode $response)
+    public function __construct(Request $request, Response $response)
     {
         $this->request = $request;
         $this->response = $response;

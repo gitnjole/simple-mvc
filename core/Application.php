@@ -7,7 +7,7 @@ class Application
     public Router $router;
     public Request $request;
     public Database $db;
-    public ResponseCode $response;
+    public Response $response;
     public static Application $app;
     public Controller $controller;
     public static string $ROOT_DIR;
@@ -17,7 +17,7 @@ class Application
         self::$app = $this;
         self::$ROOT_DIR = $rootPath;
         $this->request = new Request();
-        $this->response = new ResponseCode();
+        $this->response = new Response();
         $this->router = new Router($this->request, $this->response);
         $this->db = new Database($config['db']);
     }
