@@ -57,6 +57,15 @@ a {
 .invalid-feedback {
     color: red;
 }
+
+.alert-success {
+    color: #155724; /* Text color */
+    background-color: #d4edda; /* Background color */
+    border: 1px solid #c3e6cb; /* Border color */
+    padding: 15px; /* Padding around the content */
+    margin-bottom: 15px; /* Margin at the bottom */
+    border-radius: 4px; /* Border radius for rounded corners */
+  }
   
   
 
