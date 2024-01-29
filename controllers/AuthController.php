@@ -5,6 +5,7 @@ use app\core\Application;
 use app\core\Controller;
 use app\core\Request;
 use app\models\User;
+use app\core\Session;
 
 class AuthController extends Controller
 {
@@ -23,7 +24,9 @@ class AuthController extends Controller
             $user->loadData($request->getBody());
 
             if ($user->validate() && $user->register()) {
+                Application::$app->session->setFlashMessage('success', 'Successfully registered!');
                 Application::$app->response->redirect('/');
+                exit;
             }
 
             return $this->render('register', [
