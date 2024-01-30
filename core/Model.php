@@ -96,5 +96,10 @@ abstract class Model
     {
         return $this->errors[$attribute][0] ?? false;
     }
+
+    public function labels(): array
+    {
+        return [];
+    }
 }
 
