@@ -27,6 +27,11 @@ class User extends DBModel
         return 'users';
     }
 
+    public function primaryKey(): string
+    {
+        return 'id';
+    }
+
     public function rules(): array
     {
         return [

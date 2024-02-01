@@ -1,3 +1,7 @@
+<?php
+/** @var $model \app\models\User */
+?>
+
 <?php $form = \app\core\form\Form::Begin('', 'POST') ?>
     <?= $form->Field($model, 'username')->textField() ?>
     <?= $form->Field($model, 'password')->passwordField() ?>

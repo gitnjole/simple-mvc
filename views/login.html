@@ -1,11 +1,11 @@
-<form action="" method="POST">
-    <label for="username">Please enter a username:</label>
-    <input type="text" name="username">
-    <br>
+<?php
+/** @var $model \app\models\User */
+?>
 
-    <label for="password">Please enter a password:</label>
-    <input type="password" name="password">
-    <br>
+<h1>Login to your account!</h1><br>
 
-    <input type="submit" value="Login">
-</form>
+<?php $form = \app\core\form\Form::Begin('', 'POST') ?>
+    <?= $form->Field($model, 'username')->textField() ?>
+    <?= $form->Field($model, 'password')->passwordField() ?>
+    <button type="submit">Login</button>
+<?php \app\core\form\Form::End() ?>
