@@ -28,7 +28,8 @@ class LoginForm extends Model
 
     public function login()
     {
-        $user = self::findOne(['username' => $this->username]);
+        $user = new User();
+        $user = $user->findOne(['username' => $this->username]);
         if (!$user) {
             $this->addError('username', 'Username not found.');
             return false;
