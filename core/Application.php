@@ -2,6 +2,9 @@
 
 namespace app\core;
 
+use app\core\db\DBModel;
+use app\core\db\Database;
+
 class Application
 {
     public Router $router;

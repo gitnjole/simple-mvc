@@ -1,6 +1,9 @@
 <?php
 
-namespace app\core;
+namespace app\core\db;
+
+use app\core\Model;
+use app\core\Application;
 
 abstract class DBModel extends Model
 {
@@ -29,7 +32,7 @@ abstract class DBModel extends Model
     {
         $tableName = static::tableName();
         $attributes = array_keys($where);
-
+ 
         $sqlStatement = implode("AND ", array_map(fn($attr) => "$attr = :$attr", $attributes));
         $query = self::prepare("SELECT * FROM $tableName WHERE $sqlStatement");
         foreach ($where as $key => $item) {
