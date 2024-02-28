@@ -17,7 +17,7 @@ class Application
 
     public function __construct($rootPath, array $config) 
     {
-        $this->userClass = $config["userClass"];
+        //$this->userClass = $config["userClass"];
         self::$app = $this;
         self::$ROOT_DIR = $rootPath;
         $this->request = new Request();
@@ -27,13 +27,13 @@ class Application
 
         $this->db = new Database($config['db']);
         
-        $primaryValue = $this->session->get('user');
+/*         $primaryValue = $this->session->get('user');
         if ($primaryValue) {
             $primaryKey = $this->userClass::primaryKey();
             $this->user = $this->userClass::findOne([$primaryKey => $primaryValue]);
         } else {
             $this->user = null;
-        }
+        } */
     }
 
     public function run()
