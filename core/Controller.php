@@ -16,4 +16,9 @@ class Controller
     {
         $this->layout = $layout;
     }
+
+    public function registerMiddleware(BaseMiddleware $middleware)
+    {
+        $this->middlewares[] = $middleware;
+    }
 }
