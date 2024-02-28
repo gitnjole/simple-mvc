@@ -9,9 +9,9 @@ class Migration01_initial
         $db = Application::$app->db;
         $SQL = "CREATE TABLE IF NOT EXISTS users (
                 id SERIAL PRIMARY KEY,
-                email VARCHAR NOT NULL,
-                username VARCHAR NOT NULL,
-                password VARCHAR NOT NULL,
+                email VARCHAR(255) NOT NULL,
+                username VARCHAR(255) NOT NULL,
+                password VARCHAR(255) NOT NULL,
                 status SMALLINT NOT NULL,
                 join_date TIMESTAMP DEFAULT current_timestamp);
                 ";
