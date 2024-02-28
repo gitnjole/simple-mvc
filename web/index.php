@@ -25,11 +25,7 @@ $app = new Application(dirname(__DIR__), $config);
 
 //Routes
 $app->router->get('/', [SiteController::class, 'home']);
-
-$app->router->get('/features', [SiteController::class, 'features']);
-
-$app->router->get('/form', [SiteController::class, 'form']);
-$app->router->post('/form', [SiteController::class, 'formHandler']);
+$app->router->get('/profile', [AuthController::class, 'profile']);
 
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->post('/login', [AuthController::class, 'login']);
