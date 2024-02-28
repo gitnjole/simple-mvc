@@ -75,11 +75,10 @@ class Router
         $layout = Application::$app->layout;
         if (Application::$app->controller) {
             $layout = Application::$app->controller->layout;
-
-            ob_start();
-            include_once Application::$ROOT_DIR."/views/layouts/{$layout}.html";
-            return ob_get_clean();
         }
+        ob_start();
+        include_once Application::$ROOT_DIR."/views/layouts/{$layout}.html";
+        return ob_get_clean();
     }
 
     protected function renderOnlyView($view, $params)

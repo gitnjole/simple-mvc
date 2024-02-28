@@ -12,7 +12,7 @@ class Application
     public ?DBModel $user;
     public Response $response;
     public static Application $app;
-    public ?Controller $controller;
+    public ?Controller $controller = null;
     public Session $session;
     public static string $ROOT_DIR;
 
