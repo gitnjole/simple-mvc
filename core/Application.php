@@ -6,12 +6,13 @@ class Application
 {
     public Router $router;
     public string $userClass;
+    public string $layout = 'main';
     public Request $request;
     public Database $db;
     public ?DBModel $user;
     public Response $response;
     public static Application $app;
-    public Controller $controller;
+    public ?Controller $controller;
     public Session $session;
     public static string $ROOT_DIR;
 
