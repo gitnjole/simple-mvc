@@ -2,13 +2,13 @@
 namespace app\controllers;
 
 use app\models\User;
-use app\core\Request;
-use app\core\Session;
-use app\core\Response;
-use app\core\Controller;
-use app\core\Application;
+use gitnjole\simplemvc\Request;
+use gitnjole\simplemvc\Session;
+use gitnjole\simplemvc\Response;
+use gitnjole\simplemvc\Controller;
+use gitnjole\simplemvc\Application;
 use app\models\LoginForm;
-use app\core\middlewares\AuthMiddleware;
+use gitnjole\simplemvc\middlewares\AuthMiddleware;
 
 class AuthController extends Controller
 {

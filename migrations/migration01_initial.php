@@ -1,6 +1,6 @@
 <?php
 
-use app\core\Application;
+use gitnjole\simplemvc\Application;
 
 class Migration01_initial
 {

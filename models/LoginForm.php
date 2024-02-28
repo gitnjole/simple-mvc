@@ -2,8 +2,8 @@
 
 namespace app\models;
 
-use app\core\Model;
-use app\core\Application;
+use gitnjole\simplemvc\Model;
+use gitnjole\simplemvc\Application;
 
 class LoginForm extends Model
 {

@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-use app\core\db\DBModel;
+use gitnjole\simplemvc\db\DBModel;
 
 class User extends DBModel
 {

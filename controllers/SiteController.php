@@ -2,8 +2,8 @@
 
 namespace app\controllers;
 
-use app\core\Controller;
-use app\core\Request;
+use gitnjole\simplemvc\Controller;
+use gitnjole\simplemvc\Request;
 
 class SiteController extends Controller
 {

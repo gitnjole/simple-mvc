@@ -4,8 +4,8 @@
 
 <h1>Login to your account!</h1><br>
 
-<?php $form = \app\core\form\Form::Begin('', 'POST') ?>
+<?php $form = \gitnjole\simplemvc\form\Form::Begin('', 'POST') ?>
     <?= $form->Field($model, 'username')->textField() ?>
     <?= $form->Field($model, 'password')->passwordField() ?>
     <button type="submit">Login</button>
-<?php \app\core\form\Form::End() ?>
+<?php \gitnjole\simplemvc\form\Form::End() ?>

@@ -4,8 +4,42 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4fba3f3d4a0be8df6d8c09489d3da3d",
+    "content-hash": "8d9ea3855fe32804da961cc4e08a9f58",
     "packages": [
+        {
+            "name": "gitnjole/simple-mvc-core",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gitnjole/simple-mvc-core.git",
+                "reference": "2f481dce2a6da9e9d6d2fd4567e151c5fa6d4140"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gitnjole/simple-mvc-core/zipball/2f481dce2a6da9e9d6d2fd4567e151c5fa6d4140",
+                "reference": "2f481dce2a6da9e9d6d2fd4567e151c5fa6d4140",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gitnjole\\simplemvc\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Antonio Cahun",
+                    "email": "cahunantonio1@gmail.com"
+                }
+            ],
+            "description": "Core for the Simple MVC framework",
+            "support": {
+                "issues": "https://github.com/gitnjole/simple-mvc-core/issues",
+                "source": "https://github.com/gitnjole/simple-mvc-core/tree/v1.0.3"
+            },
+            "time": "2024-02-28T19:01:13+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.1.2",
@@ -484,5 +518,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
