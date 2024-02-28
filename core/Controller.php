@@ -12,7 +12,7 @@ class Controller
     /**
      * @var \app\core\middlewares\BaseMiddleware[]
      */
-    public array $middlewares = [];
+    protected array $middlewares = [];
 
     public function render($view, $params = [])
     {
@@ -27,5 +27,10 @@ class Controller
     public function registerMiddleware(BaseMiddleware $middleware)
     {
         $this->middlewares[] = $middleware;
+    }
+
+    public function getMiddleware(): array
+    {
+        return $this->middlewares;
     }
 }
