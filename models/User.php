@@ -9,11 +9,13 @@ class User extends DBModel
     const STATUS_INACTIVE = 0;
     const STATUS_ACTIVE = 1;
 
+    public string $id = '';
     public string $username = '';
     public string $email = '';
     public int $status = self::STATUS_INACTIVE;
     public string $password = '';
     public string $confirmPassword = '';
+    public string $join_date = '';
 
     public function register()
     {
@@ -36,7 +38,7 @@ class User extends DBModel
     {
         return [
             'username' => [[self::RULE_REQUIRED], [self::RULE_UNIQUE, 'class' => self::class]],
-            'password' => [self::RULE_REQUIRED, [self::RULE_PASS_LEN, 'min' => 8]],
+            'password' => [self::RULE_REQUIRED, [self::RULE_PASS_LEN, 'min' => 3]],
             'confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL, [self::RULE_UNIQUE, 'class' => self::class]]
         ];
