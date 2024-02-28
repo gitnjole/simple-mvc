@@ -1,7 +1,4 @@
 <?php
-/**Testing purpose file */
-include '../DUMP.php';
-include '../PHP_SHOW_ERR.php';
 
 use app\core\Application;
 
