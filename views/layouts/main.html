@@ -14,12 +14,18 @@
             <li>
                 <a href="/">Home</a>
             </li>
+            <?php if (Application::isGuest()): ?>
             <li>
                 <a href="/register">Register</a>
             </li>
             <li>
                 <a href="/login">Login</a>
             </li>
+            <?php else: ?>
+            <li>
+                <a href="/logout">Log out</a>
+            </li>
+            <?php endif; ?>
             <li>
                 <a href="/features">Features</a>
             </li>
