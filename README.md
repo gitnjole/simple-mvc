@@ -24,7 +24,7 @@ SimpleMVC is a lightweight custom PHP framework designed to provide a solid foun
 >- [x] Layouts.
 >- [x] Validation.
 >- [x] Models.
->- [ ] Middleware.
+>- [x] Middleware.
 >- [X] Database connection.
 
 ## Known issues:
@@ -33,9 +33,17 @@ At this point in the project, many. Notable known issues will be posted here.
 
 ## Installation
 
+1. Clone archive using git
+```bash
+git clone https://github.com/gitnjole/simple-mvc
 ```
-WIP
-Need to make core installable as a composer package
+2. Modify the database schema in `migrations/`
+3. Create `.env` file from `.env-example` and adjust database parameters
+4. Run `composer install`
+5. Run migrations by executing `php migrations.php` from the project root directory
+6. Start the php server from the `web/` directory using
+```bash
+php -S 127.0.0.1:[desired_port]
 ```
 
 # Getting started
