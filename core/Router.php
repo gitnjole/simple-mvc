@@ -41,8 +41,17 @@ class Router
         }
 
         if (is_array($callback)) {
-            Application::$app->controller = new $callback[0]();
-            $callback[0] = Application::$app->controller;
+            /**
+             * @var \app\core\Controller $controller
+             */
+            $controller = new $callback[0]();
+            Application::$app->controller = $controller;
+            $controller->action = $callback[1];
+            $callback[0] = $controller;
+
+            foreach ($controller->getMiddleware() as $middleware) {
+                $middleware->handle();
+            }
         }
 
         return call_user_func($callback, $this->request, $this->response);
