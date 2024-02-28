@@ -2,10 +2,17 @@
 
 namespace app\core;
 use app\core\Application;
+use app\core\middlewares\BaseMiddleware;
 
 class Controller
 {
     public string $layout = 'main';
+    public string $action = '';
+
+    /**
+     * @var \app\core\middlewares\BaseMiddleware[]
+     */
+    public array $middlewares = [];
 
     public function render($view, $params = [])
     {
