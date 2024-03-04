@@ -81,9 +81,11 @@ Using the `migrations.php` file in the root directory, you can create and manage
 The script is responsible for applying migrations and loading the necessary configurations while applying migrations defined in separate migration files. Now that the word migration has lost it's meaning, run the `migrations.php` file while in the root directory.
 
 You should see something like the following lines:
+```bash
 [2024-03-04 00:21:29] - Applying migration migration01_initial.php
 [2024-03-04 00:21:29] - Applied migration migration01_initial.php
 [2024-03-04 00:21:29] - All migrations were applied.
+```
 
 - If you encounter an error 'Undefined array key "userClass" You need to make sure that you're passing in the following line in the `$config` array in `migrations.php`:
 ```php
