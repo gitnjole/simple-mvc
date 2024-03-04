@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app:
+    build: ./docker
+    image: gitnjole/simple_mvc
+    ports:
+     - "8080:80"
+    volumes:
+      - ./:/var/www
+  db:
+    image: mysql:8
+    ports:
+     - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker/mysql-config.cnf:/etc/mysql/conf.d/
+    environment:
+     - MYSQL_ROOT_PASSWORD: root
+     - MYSQL_DATABASE: ''
+     - MYSQL_USER: ''
+     - MYSQL_PASSWORD: ''
