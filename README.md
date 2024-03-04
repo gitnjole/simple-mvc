@@ -99,7 +99,10 @@ $config = [
     ]
 ];
 ```
+### Creating migrations
 
+Migration files are PHP classes containing Lift() and Drop() methods for applying and reverting the changes to the database schema, respectively. 
+When creating a new migration, head over to the `/migrations/` directory and create a new migration file. The naming convention can be whatever you want, but I've chosen to stick with Laravel-like naming convention where files start with `migration` and end with a description of what the migration does, for example `migration0001_create_listing_table.php`.
 
 # Attributions
 
