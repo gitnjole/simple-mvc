@@ -29,7 +29,7 @@ SimpleMVC is a lightweight custom PHP framework designed to provide a solid foun
 
 ## Known issues:
 
-At this point in the project, many. Notable known issues will be posted here.
+At this point the core of the project is complete and has the basic expected functionalities of a MVC based framework. Issues are possible and security concerns are many, so use it at your own risk. If you encounter any issues while using the framework, I encourage you to try and report them. 
 
 ## Installation
 
