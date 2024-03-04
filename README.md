@@ -33,7 +33,7 @@ At this point the core of the project is complete and has the basic expected fun
 
 ## Installation
 
-1. Clone archive using git
+1. Clone project using git
 ```bash
 git clone https://github.com/gitnjole/simple-mvc
 ```
@@ -45,6 +45,40 @@ git clone https://github.com/gitnjole/simple-mvc
 ```bash
 php -S 127.0.0.1:[desired_port]
 ```
+
+## Installation using Docker
+
+Make sure you have docker installed on your system.
+
+1. Clone project using git
+2. Copy .env-example into .env
+- Here you will need to modify the `.env` file along with `docker-compose.yml` with the following changes:
+
+Inside the `docker-compose.yml` there will be a db configuration like this:
+```bash
+  db:
+    image: mysql:8
+    ports:
+     - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker/mysql-config.cnf:/etc/mysql/conf.d/
+    environment:
+     - MYSQL_ROOT_PASSWORD: root
+     - MYSQL_DATABASE: ''
+     - MYSQL_USER: ''
+     - MYSQL_PASSWORD: ''
+```
+You need to set these to be the same as in your `.env` file which would have to look something like
+```bash
+DB_DSN=mysql:host=db;port=3306;dbname=simple_mvc
+DB_USER=user
+DB_PASSWORD=pass
+```
+3. Navigate to the project root directory and run `docker -compose up -d`
+4. Install dependencies `docker-compose exec app composer install`
+5. Run migrations `docker-compose exec app php migrations.php`
+6. You should now be able to access the landing page in the browser using http://127.0.0.1:8080
 
 # Getting started
 
