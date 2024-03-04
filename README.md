@@ -76,8 +76,12 @@ Currently, views are embeded through `{{content}}` in `views/layouts/main.html`.
 
 Will write up soon.
 
-# Examples
+# Attributions
 
-Here I will link examples of 1-2 web applications created using my framework once I complete basic functionality needed to accomplish my goals.
+This project was made as a learning experience and was largely inspired by the following sources:
+
+- [PHP 8 Objects, Patterns, and Practice by Matt Zandstra](https://www.amazon.com/PHP-Objects-Patterns-Practice-Enhancements/dp/1484267907)
+- [The Codeholic](https://www.youtube.com/@TheCodeholic)
+- [Laravel documentation](https://laravel.com/docs/10.x)
 
 
