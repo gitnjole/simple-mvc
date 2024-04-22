@@ -1,3 +1,8 @@
+<p align="center">
+  <img width="120px" src="web/images/readme/php.png"/> 
+  <img width="80px" src="web/images/readme/tailwind.png"/> 
+</p> 
+
 # Simple MVC
 
 SimpleMVC is a lightweight custom PHP framework designed to provide a solid foundation for building robust web applications. This framework is mainly used for education purposes and as a learning tool, built to closely resemble the Laravel framework. 
